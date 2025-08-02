@@ -79,11 +79,10 @@ const CVEducation = () => {
         {education.map((item, index) => {
           const IconComponent = getTypeIcon(item.type);
           const colorClass = getTypeColor(item.type);
-          
           return (
             <div 
               key={index}
-              className="card-glass rounded-lg p-3 hover-glow fade-in-up"
+              className="p-3 fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-2">
@@ -114,7 +113,7 @@ const CVEducation = () => {
       </div>
 
       {/* Additional Info */}
-      <div className="mt-4 card-glass rounded-lg p-3">
+      <div className="mt-4 p-3">
         <h3 className="text-sm font-bold text-foreground mb-2 text-center">
           Idiomas & Otros
         </h3>
