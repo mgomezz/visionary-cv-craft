@@ -70,12 +70,12 @@ const getTypeColor = (type: string) => {
 
 const CVEducation = () => {
   return (
-    <section className="mb-8">
-      <h2 className="text-2xl font-bold text-gradient mb-6 text-center">
+    <section className="mb-5">
+      <h2 className="text-xl font-bold text-gradient mb-4 text-center">
         Formación & Certificaciones
       </h2>
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
         {education.map((item, index) => {
           const IconComponent = getTypeIcon(item.type);
           const colorClass = getTypeColor(item.type);
@@ -83,22 +83,22 @@ const CVEducation = () => {
           return (
             <div 
               key={index}
-              className="card-glass rounded-lg p-4 hover-glow fade-in-up"
+              className="card-glass rounded-lg p-3 hover-glow fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex items-start gap-3">
-                <div className={`p-2 rounded-lg bg-${colorClass}/10 flex-shrink-0`}>
-                  <IconComponent className={`w-4 h-4 text-${colorClass}`} />
+              <div className="flex items-start gap-2">
+                <div className={`p-1.5 rounded-lg bg-${colorClass}/10 flex-shrink-0`}>
+                  <IconComponent className={`w-3 h-3 text-${colorClass}`} />
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-sm font-bold text-foreground mb-1">
+                  <h3 className="text-xs font-bold text-foreground mb-0.5">
                     {item.degree}
                   </h3>
-                  <p className="text-primary font-semibold mb-1 text-xs">
+                  <p className="text-primary font-semibold mb-0.5 text-xs">
                     {item.institution}
                   </p>
-                  <p className="text-xs text-muted-foreground mb-2">
+                  <p className="text-xs text-muted-foreground mb-1">
                     {item.period}
                   </p>
                   {item.description && (
@@ -114,15 +114,15 @@ const CVEducation = () => {
       </div>
 
       {/* Additional Info */}
-      <div className="mt-6 card-glass rounded-lg p-4">
-        <h3 className="text-base font-bold text-foreground mb-3 text-center">
+      <div className="mt-4 card-glass rounded-lg p-3">
+        <h3 className="text-sm font-bold text-foreground mb-2 text-center">
           Idiomas & Otros
         </h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="text-center">
-            <h4 className="font-semibold text-foreground mb-2 text-sm">Idiomas</h4>
-            <div className="space-y-1">
+            <h4 className="font-semibold text-foreground mb-1.5 text-xs">Idiomas</h4>
+            <div className="space-y-0.5">
               <div className="flex justify-between">
                 <span className="text-xs text-muted-dark">Español</span>
                 <span className="text-xs text-primary font-medium">Nativo</span>
@@ -139,8 +139,8 @@ const CVEducation = () => {
           </div>
           
           <div className="text-center">
-            <h4 className="font-semibold text-foreground mb-2 text-sm">Metodologías</h4>
-            <div className="space-y-1">
+            <h4 className="font-semibold text-foreground mb-1.5 text-xs">Metodologías</h4>
+            <div className="space-y-0.5">
               <span className="block text-xs text-muted-dark">Agile / Scrum</span>
               <span className="block text-xs text-muted-dark">Design Thinking</span>
               <span className="block text-xs text-muted-dark">TDD</span>
@@ -148,8 +148,8 @@ const CVEducation = () => {
           </div>
           
           <div className="text-center">
-            <h4 className="font-semibold text-foreground mb-2 text-sm">Intereses</h4>
-            <div className="space-y-1">
+            <h4 className="font-semibold text-foreground mb-1.5 text-xs">Intereses</h4>
+            <div className="space-y-0.5">
               <span className="block text-xs text-muted-dark">Open Source</span>
               <span className="block text-xs text-muted-dark">Tech Blogging</span>
               <span className="block text-xs text-muted-dark">Fotografía</span>

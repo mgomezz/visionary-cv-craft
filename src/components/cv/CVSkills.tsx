@@ -63,12 +63,12 @@ const skillCategories: SkillCategory[] = [
 
 const SkillBar = ({ skill }: { skill: Skill }) => {
   return (
-    <div className="mb-3">
-      <div className="flex justify-between items-center mb-1">
-        <span className="text-sm font-medium text-foreground">{skill.name}</span>
+    <div className="mb-2">
+      <div className="flex justify-between items-center mb-0.5">
+        <span className="text-xs font-medium text-foreground">{skill.name}</span>
         <span className="text-xs text-muted-foreground">{skill.level}%</span>
       </div>
-      <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+      <div className="w-full bg-muted rounded-full h-1 overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full skill-bar"
           style={{ 
@@ -83,30 +83,30 @@ const SkillBar = ({ skill }: { skill: Skill }) => {
 
 const CVSkills = () => {
   return (
-    <section className="mb-8">
-      <h2 className="text-2xl font-bold text-gradient mb-6 text-center">
+    <section className="mb-5">
+      <h2 className="text-xl font-bold text-gradient mb-4 text-center">
         Habilidades Técnicas
       </h2>
       
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
         {skillCategories.map((category, index) => {
           const IconComponent = category.icon;
           return (
             <div 
               key={category.title}
-              className="card-glass rounded-lg p-4 hover-glow fade-in-up"
+              className="card-glass rounded-lg p-3 hover-glow fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex items-center gap-2 mb-4">
-                <div className={`p-2 rounded-lg bg-${category.color}/10`}>
-                  <IconComponent className={`w-4 h-4 text-${category.color}`} />
+              <div className="flex items-center gap-2 mb-3">
+                <div className={`p-1.5 rounded-lg bg-${category.color}/10`}>
+                  <IconComponent className={`w-3 h-3 text-${category.color}`} />
                 </div>
-                <h3 className="text-base font-bold text-foreground">
+                <h3 className="text-sm font-bold text-foreground">
                   {category.title}
                 </h3>
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {category.skills.map((skill) => (
                   <SkillBar key={skill.name} skill={skill} />
                 ))}
@@ -117,17 +117,17 @@ const CVSkills = () => {
       </div>
 
       {/* Additional Skills */}
-      <div className="mt-6 card-glass rounded-lg p-4">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="p-2 rounded-lg bg-secondary/10">
-            <Users className="w-4 h-4 text-secondary" />
+      <div className="mt-4 card-glass rounded-lg p-3">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="p-1.5 rounded-lg bg-secondary/10">
+            <Users className="w-3 h-3 text-secondary" />
           </div>
-          <h3 className="text-base font-bold text-foreground">
+          <h3 className="text-sm font-bold text-foreground">
             Habilidades Blandas
           </h3>
         </div>
         
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-1.5">
           {[
             "Liderazgo de equipos",
             "Comunicación efectiva", 
@@ -140,7 +140,7 @@ const CVSkills = () => {
           ].map((softSkill, index) => (
             <div 
               key={softSkill}
-              className="p-2 bg-muted/50 rounded text-center text-xs font-medium text-muted-dark hover:bg-secondary/10 hover:text-secondary transition-colors"
+              className="p-1.5 bg-muted/50 rounded text-center text-xs font-medium text-muted-dark hover:bg-secondary/10 hover:text-secondary transition-colors"
             >
               {softSkill}
             </div>

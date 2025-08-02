@@ -54,8 +54,8 @@ const experiences: ExperienceItem[] = [
 
 const CVExperience = () => {
   return (
-    <section className="mb-8">
-      <h2 className="text-2xl font-bold text-gradient mb-6 text-center">
+    <section className="mb-5">
+      <h2 className="text-xl font-bold text-gradient mb-4 text-center">
         Experiencia Profesional
       </h2>
       
@@ -63,53 +63,53 @@ const CVExperience = () => {
         {/* Timeline line */}
         <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           {experiences.map((exp, index) => (
             <div 
               key={index}
-              className="relative flex flex-col lg:flex-row items-start gap-6 fade-in-up"
+              className="relative flex flex-col lg:flex-row items-start gap-4 fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Timeline dot */}
-              <div className="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-3 h-3 bg-primary rounded-full border-3 border-background shadow-medium z-10" />
+              <div className="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-2.5 h-2.5 bg-primary rounded-full border-2 border-background shadow-medium z-10" />
               
               {/* Content card */}
-              <div className={`ml-12 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-6' : 'lg:pl-6 lg:order-2'}`}>
-                <div className="card-glass rounded-lg p-5 hover-glow">
+              <div className={`ml-12 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4 lg:order-2'}`}>
+                <div className="card-glass rounded-lg p-3 hover-glow">
                   {/* Header */}
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold text-foreground mb-1">
+                  <div className="mb-2">
+                    <h3 className="text-base font-bold text-foreground mb-0.5">
                       {exp.position}
                     </h3>
-                    <div className="flex items-center gap-2 text-primary font-semibold mb-2">
-                      <ExternalLink className="w-3 h-3" />
-                      <span className="text-sm">{exp.company}</span>
+                    <div className="flex items-center gap-2 text-primary font-semibold mb-1">
+                      <ExternalLink className="w-2.5 h-2.5" />
+                      <span className="text-xs">{exp.company}</span>
                     </div>
                     
-                    <div className="flex gap-4 text-xs text-muted-foreground">
+                    <div className="flex gap-3 text-xs text-muted-foreground">
                       <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
+                        <Calendar className="w-2.5 h-2.5" />
                         <span>{exp.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
+                        <MapPin className="w-2.5 h-2.5" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-muted-dark mb-3 leading-relaxed">
+                  <p className="text-xs text-muted-dark mb-2 leading-relaxed">
                     {exp.description}
                   </p>
 
                   {/* Achievements */}
-                  <div className="mb-3">
-                    <h4 className="font-semibold text-foreground mb-1 text-sm">Logros destacados:</h4>
-                    <ul className="space-y-1">
+                  <div className="mb-2">
+                    <h4 className="font-semibold text-foreground mb-1 text-xs">Logros destacados:</h4>
+                    <ul className="space-y-0.5">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-muted-dark">
-                          <div className="w-1 h-1 bg-secondary rounded-full mt-1.5 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-1.5 text-xs text-muted-dark">
+                          <div className="w-0.5 h-0.5 bg-secondary rounded-full mt-1.5 flex-shrink-0" />
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -121,7 +121,7 @@ const CVExperience = () => {
                     {exp.technologies.map((tech, i) => (
                       <span 
                         key={i}
-                        className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded border border-primary/20"
+                        className="px-1.5 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded border border-primary/20"
                       >
                         {tech}
                       </span>
