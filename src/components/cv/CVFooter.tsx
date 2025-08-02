@@ -19,10 +19,10 @@ const CVFooter = () => {
   };
 
   return (
-    <footer className="mt-16 mb-8">
+    <footer className="mt-8 mb-6">
       {/* Action Buttons */}
-      <div className="flex justify-center gap-4 mb-8">
-        <Button 
+      <div className="flex justify-center gap-3 mb-6">
+        <Button
           onClick={handleDownload}
           className="bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-medium hover:shadow-strong transition-all duration-300"
         >
@@ -41,11 +41,11 @@ const CVFooter = () => {
       </div>
 
       {/* Footer Content */}
-      <div className="card-glass rounded-xl p-6 text-center">
-        <div className="flex items-center justify-center gap-2 text-muted-foreground mb-4">
-          <span>Hecho con</span>
-          <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-          <span>y mucho café ☕</span>
+      <div className="card-glass rounded-lg p-4 text-center">
+        <div className="flex items-center justify-center gap-2 text-muted-foreground mb-3">
+          <span className="text-sm">Hecho con</span>
+          <Heart className="w-3 h-3 text-red-500 fill-current animate-pulse" />
+          <span className="text-sm">y mucho café ☕</span>
         </div>
         
         <p className="text-sm text-muted-dark mb-4">
