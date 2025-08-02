@@ -19,40 +19,40 @@ const CVFooter = () => {
   };
 
   return (
-    <footer className="mt-8 mb-6">
+    <footer className="mt-5 mb-3">
       {/* Action Buttons */}
-      <div className="flex justify-center gap-3 mb-6">
+      <div className="flex justify-center gap-2 mb-4">
         <Button
           onClick={handleDownload}
-          className="bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-3 rounded-xl font-semibold shadow-medium hover:shadow-strong transition-all duration-300"
+          className="bg-primary hover:bg-primary-dark text-primary-foreground px-4 py-2 rounded-xl font-semibold shadow-medium hover:shadow-strong transition-all duration-300"
         >
-          <Download className="w-5 h-5 mr-2" />
+          <Download className="w-4 h-4 mr-1.5" />
           Descargar PDF
         </Button>
         
         <Button 
           onClick={handleShare}
           variant="outline"
-          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-2 rounded-xl font-semibold transition-all duration-300"
         >
-          <Share2 className="w-5 h-5 mr-2" />
+          <Share2 className="w-4 h-4 mr-1.5" />
           Compartir
         </Button>
       </div>
 
       {/* Footer Content */}
-      <div className="card-glass rounded-lg p-4 text-center">
-        <div className="flex items-center justify-center gap-2 text-muted-foreground mb-3">
-          <span className="text-sm">Hecho con</span>
-          <Heart className="w-3 h-3 text-red-500 fill-current animate-pulse" />
-          <span className="text-sm">y mucho café ☕</span>
+      <div className="card-glass rounded-lg p-3 text-center">
+        <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
+          <span className="text-xs">Hecho con</span>
+          <Heart className="w-2.5 h-2.5 text-red-500 fill-current animate-pulse" />
+          <span className="text-xs">y mucho café ☕</span>
         </div>
         
-        <p className="text-sm text-muted-dark mb-4">
+        <p className="text-xs text-muted-dark mb-3">
           Curriculum Vitae - Actualizado en Agosto 2024
         </p>
         
-        <div className="border-t border-border pt-4">
+        <div className="border-t border-border pt-3">
           <p className="text-xs text-muted-foreground">
             "El mejor momento para plantar un árbol fue hace 20 años. El segundo mejor momento es ahora." 
             <br />
