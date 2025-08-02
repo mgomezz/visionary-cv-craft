@@ -94,7 +94,7 @@ const CVSkills = () => {
           return (
             <div 
               key={category.title}
-              className="card-glass rounded-lg p-3 hover-glow fade-in-up"
+              className="p-3 fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-center gap-2 mb-3">
@@ -117,7 +117,7 @@ const CVSkills = () => {
       </div>
 
       {/* Additional Skills */}
-      <div className="mt-4 card-glass rounded-lg p-3">
+      <div className="mt-4 p-3">
         <div className="flex items-center gap-2 mb-3">
           <div className="p-1.5 rounded-lg bg-secondary/10">
             <Users className="w-3 h-3 text-secondary" />

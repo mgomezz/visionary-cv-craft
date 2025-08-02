@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* CV Container */}
-      <div className="max-w-7xl mx-auto px-4 py-3">
+      <div className="max-w-3xl mx-auto px-8 py-3">
         <CVHeader />
         <CVExperience />
         <CVSkills />

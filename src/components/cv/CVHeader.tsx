@@ -7,7 +7,7 @@ const CVHeader = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5" />
       
-      <div className="relative card-glass rounded-xl p-4 md:p-5 mb-4 hover-glow">
+      <div className="relative p-4 md:p-5 mb-4">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
           {/* Profile Photo */}
           <div className="relative flex-shrink-0">

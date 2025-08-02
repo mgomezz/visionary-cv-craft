@@ -41,7 +41,7 @@ const CVFooter = () => {
       </div>
 
       {/* Footer Content */}
-      <div className="card-glass rounded-lg p-3 text-center">
+      <div className="p-3 text-center">
         <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
           <span className="text-xs">Hecho con</span>
           <Heart className="w-2.5 h-2.5 text-red-500 fill-current animate-pulse" />

@@ -62,7 +62,6 @@ const CVExperience = () => {
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
-        
         <div className="space-y-4">
           {experiences.map((exp, index) => (
             <div 
@@ -73,9 +72,9 @@ const CVExperience = () => {
               {/* Timeline dot */}
               <div className="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-2.5 h-2.5 bg-primary rounded-full border-2 border-background shadow-medium z-10" />
               
-              {/* Content card */}
-              <div className={`ml-12 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4 lg:order-2'}`}>
-                <div className="card-glass rounded-lg p-3 hover-glow">
+              {/* Content */}
+              <div className={`ml-12 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-4' : 'lg:pl-4 lg:order-2'}`}> 
+                <div>
                   {/* Header */}
                   <div className="mb-2">
                     <h3 className="text-base font-bold text-foreground mb-0.5">
