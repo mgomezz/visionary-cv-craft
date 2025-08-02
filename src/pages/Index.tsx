@@ -1,11 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import CVHeader from "@/components/cv/CVHeader";
+import CVExperience from "@/components/cv/CVExperience";
+import CVSkills from "@/components/cv/CVSkills";
+import CVEducation from "@/components/cv/CVEducation";
+import CVFooter from "@/components/cv/CVFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      {/* CV Container */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <CVHeader />
+        <CVExperience />
+        <CVSkills />
+        <CVEducation />
+        <CVFooter />
       </div>
     </div>
   );
